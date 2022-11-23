@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Grid */
+.container {  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.1fr 2fr 2fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "section1 section1 section2 section2"
+      "section3 section4 section5 section6"
+      "footer footer footer footer";
+}
+.header { 
+    grid-area: header;
+}
+.section1 { 
+    grid-area: section1;
+}
+.section2 { 
+    grid-area: section2;   
+}
+.section3 { 
+    grid-area: section3;     
+}
+.section4 { 
+    grid-area: section4; 
+}  
+.section5 { 
+    grid-area: section5;
+ }  
+.section6 { 
+    grid-area: section6;
+}  
+.footer { 
+    grid-area: footer; 
+}
+body{
+    background-color: #fbe5e2;
+    background-image: url("../media/forma-fondo-index.png");
+    background-repeat: no-repeat; 
+}
+.sobreMiBody{
+    background-color: #ffffff;
+    background-image: url("../media/forma-fondo-sobre-mi.jpg");
+    background-position: top right;
+    background-repeat: no-repeat; 
+}
+.contactoBody{
+    background-color: #ffffff;
+    background-image: url("../media/forma-fondo-contacto.jpg");
+    background-position: top right;
+    background-repeat: no-repeat; 
+}
+
+/* Menú de navegación */
+.header { 
+    background-image: linear-gradient(to right, #fbe5e2, #EEC0C6);
+    color: #282828;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header img{
+  width: 100px;
+}
+.header ul{
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+  }
+.header ul li{
+
+    padding: 10px;
+}
+.header ul li a{
+  color:#282828;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.menu .item{
+    display: inline-block;
+    position:relative;
+    font-size: 1rem;
+    text-align: center;
+}
+.menu .submenu{
+    position:absolute;
+	display: none;
+}
+.menu .submenu .subitem{
+    display: block;
+    font-size: 1rem;
+    padding: auto;
+}
+.menu .item a{
+    text-decoration: none;
+    color: #282828;
+    display: inline-block;
+    padding: 20px;
+}
+.menu .item a:hover{
+    background-color: #ffffff4b;
+    color: #282828;
+    font-weight: 700;
+}
+.menu .item:hover .submenu{
+    display: block;
+    color: #282828;
+    background-color: #e3fbff;
+}
+.menu .item:hover a{
+	background-color: #e3fbff;
+	color: #282828;
+    font-weight: 700;
+}
+.productMenu:hover .submenu {
+    display: block;
+    background-color: #e3fbff;
+}
+.submenu{
+    list-style-type: none;
+}
+
+/* Secciones */
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-top: 100px;
+    padding-left:50px;
+}
+.bajadaHero{
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+.botonPrincipal{
+    background-color: #861657;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 50px;
+    border: none;
+}
+.botonPrincipal a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: left;
+}
+.botonPrincipal:hover{
+    background-color: #ffffff;
+    border: 2px solid #861657;
+}
+.botonPrincipal:hover a{
+    color:#861657;
+    background-color: #ffffff;
+    font-weight: 700;
+}
+.heroImg{
+    display: flex;
+    justify-content: space-around;
+}
+.heroImg img{
+    width: 350px;
+    padding-top: 50px;
+}
+
+
+/* Cards */
+h2{
+    text-align: center;
+    margin:10px;
+}
+
+hr{
+    width:50%;
+    height: 2px;
+    border: 0;
+    background: #282828;
+    margin: auto;
+}
+
+.cards{
+    background-color: #aff0ff;
+    width: 250px;
+    border-radius: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: auto;
+}
+.cards h2{
+    padding: 10px 0;
+    font-family: 'Playfair Display', serif;
+}
+.cards p{
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 0;
+}
+
+.img{
+    text-align: center;
+    margin:10px;
+ }
+
+ .cards:hover{
+    transform: scale(1.1,1.1);
+    transition: all 0.5s ease;
+  }
+
+  /* Sobre mí */
+
+.imagenSobreMi{
+    display: flex;
+    vertical-align: middle;
+    padding: 50px;
+}
+
+.imagenSobreMi:hover{
+    transform: scale(1.1,1.1);
+    transition: all 0.5s ease;
+  }
+
+.textoSobreMi h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    padding: 40px 0;
+    text-align: left;  
+}
+.textoSobreMi p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+/*Contacto*/
+.seccionForm{
+    margin-left: 50px;
+}
+form {
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: auto;
+}
+input{
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+form input{
+    width: 500px;
+    border-radius: 30px;
+    padding: 20px;
+}
+form textarea{
+    width: 600px;
+    border-radius: 30px;
+    padding: 20px;
+}
+.checkbox{
+    text-align: left;
+    font-weight: 300;
+}
+form .botonPrincipal{
+    color: #ffffff;
+    background-color: #861657;
+}
+
+form .botonPrincipal:hover{
+    color: #282828;
+    font-weight: 700;
+}
+
+ /* Footer */
+.footer {  
+    background-color: #282828;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+footer p{
+    color: #ffffff;
+    margin: 0 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+footer .redesSociales{
+    padding: 0 20px;
+}
+.footer img{
+    width: 90px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px){
+  .container{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "section1 section1 section1 section2"
+      "section3 section3 section4 section4"
+      "section5 section5 section6 section6"
+      "footer footer footer footer";
+  }
+}
+@media screen and (max-width: 480px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+      "header"
+      "section1"
+      "section2"
+      "section3"
+      "section4"
+      "section5"
+      "section6"
+      "footer";
+  }
+  .header{
+    flex-direction: column;
+    align-items: center;
+  }
+}
